@@ -246,6 +246,11 @@ int RunProcess(PRO &PC, int index)
 // RR算法
 void RR(PRO &PC, int n)
 {
+    // 对全局变量进行初始化以便实现循环多次使用
+    CurrentTime = 0;
+    ProNum = n;
+    ProIndex = 0;
+    TimeSlice = 0;
     for (int s = 0; s < n; s++) // 标志位初始化为0
     {
         PC[s].Signal = 0;
